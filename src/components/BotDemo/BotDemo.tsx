@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Bot, Sparkles, Calendar, Mail, CheckCircle } from 'lucide-react';
+import { Send, Bot, Calendar, Mail, CheckCircle } from 'lucide-react';
 
 interface Message {
   id: string;

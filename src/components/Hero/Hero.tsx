@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Bot, Sparkles, ChevronRight } from 'lucide-react';
+import { Sparkles, ChevronRight } from 'lucide-react';
 import Ecosystem from './Ecosystem';
 
 export default function Hero({ onOpenContact }: { onOpenContact?: () => void }) {

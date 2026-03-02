@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageCircle, Send, Mail, Calendar, FileSpreadsheet, Share2 } from 'lucide-react';
+import { MessageCircle, Send, Mail, Calendar, FileSpreadsheet } from 'lucide-react';
 
 const icons = [
   { icon: MessageCircle, color: '#25D366', label: 'WhatsApp', x: 0.01, y: -210 },
