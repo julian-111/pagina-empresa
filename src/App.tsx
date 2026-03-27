@@ -70,11 +70,6 @@ function App() {
             <p className="text-gray-500 text-sm">
               © 2026 NexusAUT. Desarrollo web, aplicativos y automatización empresarial.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-neon-cyan transition-colors">Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-neon-cyan transition-colors">LinkedIn</a>
-              <a href="#" className="text-gray-400 hover:text-neon-cyan transition-colors">GitHub</a>
-            </div>
           </div>
         </footer>
       </div>
