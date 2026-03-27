@@ -16,6 +16,7 @@ export default function BotDemo() {
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const idCounter = useRef<number>(2);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -27,7 +28,7 @@ export default function BotDemo() {
     e.preventDefault();
     if (!input.trim()) return;
 
-    const userMsg: Message = { id: Date.now().toString(), text: input, sender: 'user' };
+    const userMsg: Message = { id: String(idCounter.current++), text: input, sender: 'user' };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
     setIsTyping(true);
@@ -35,17 +36,19 @@ export default function BotDemo() {
     setTimeout(() => {
       const response = getBotResponse(input);
       const botMsg: Message = {
-        id: (Date.now() + 1).toString(),
+        id: String(idCounter.current++),
         text: response.text,
         sender: 'bot',
-        action: response.action as any,
+        action: response.action,
       };
       setMessages(prev => [...prev, botMsg]);
       setIsTyping(false);
     }, 1200);
   };
 
-  const getBotResponse = (text: string) => {
+  type BotResponse = { text: string; action?: Message['action'] };
+
+  const getBotResponse = (text: string): BotResponse => {
     const t = text.toLowerCase();
     if (t.includes('agenda') || t.includes('cita') || t.includes('reunión')) {
       return { text: 'Entendido. Accediendo a tu calendario... He encontrado un espacio disponible mañana a las 10:00 AM. ¿Deseas que agende la cita?', action: 'schedule' };

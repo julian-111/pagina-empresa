@@ -52,10 +52,10 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl lg:text-5xl font-bold mb-4"
           >
-            Inversión en <span className="gradient-text">Automatización</span>
+            Inversión en <span className="gradient-text">Desarrollo</span>
           </motion.h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Planes diseñados para crecer contigo, desde startups hasta corporaciones globales.
+            Paquetes pensados para sitios web, aplicativos y automatizaciones empresariales, escalables a tu medida.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function Pricing() {
                 <span className="text-gray-400 ml-2">{plan.period}</span>
               </div>
 
-              <div className="pt-2 text-gray-500 text-sm"> </div>
+              <div className="pt-2 text-gray-500 text-sm"></div>
             </motion.div>
           ))}
         </div>

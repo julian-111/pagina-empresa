@@ -13,15 +13,15 @@ export default function Hero({ onOpenContact }: { onOpenContact?: () => void }) 
         >
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan mb-6">
             <Sparkles size={16} className="animate-pulse" />
-            <span className="text-sm font-medium">Eficiencia Operativa</span>
+            <span className="text-sm font-medium">Soluciones Tecnológicas</span>
           </div>
           
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            Asistentes <span className="gradient-text">Virtuales Programados</span> para tu Empresa
+            Somos una <span className="gradient-text">Empresa de Programación</span> enfocada en tu crecimiento
           </h1>
           
           <p className="text-xl text-gray-400 mb-10 max-w-lg">
-            Optimiza tu flujo de trabajo con asistentes digitales que ejecutan tareas críticas 24/7. Agendar citas, gestionar correos y actualizar tu CRM ahora es automático.
+            Desarrollamos páginas web innovadoras y dinámicas, aplicativos web a medida y automatizaciones empresariales que optimizan procesos y potencian tus resultados.
           </p>
 
           <div className="flex">

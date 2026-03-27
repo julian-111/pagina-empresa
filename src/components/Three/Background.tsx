@@ -4,14 +4,21 @@ import * as THREE from 'three';
 
 function Particles({ count = 5000 }) {
   const points = useRef<THREE.Points>(null!);
-
   const particlesPosition = useMemo(() => {
+    function makePRNG(seed: number) {
+      let s = seed >>> 0;
+      return () => {
+        s = (s * 1664525 + 1013904223) >>> 0;
+        return s / 0xffffffff;
+      };
+    }
+    const rnd = makePRNG(42 + count);
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
       const distance = 40;
-      positions[i * 3] = (Math.random() - 0.5) * distance;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * distance;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * distance;
+      positions[i * 3] = (rnd() - 0.5) * distance;
+      positions[i * 3 + 1] = (rnd() - 0.5) * distance;
+      positions[i * 3 + 2] = (rnd() - 0.5) * distance;
     }
     return positions;
   }, [count]);

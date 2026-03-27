@@ -1,41 +1,41 @@
 import { motion } from 'framer-motion';
-import { Calendar, Mail, Database, Clock, ArrowRightLeft, LayoutGrid } from 'lucide-react';
+import { LayoutGrid, Code, Workflow, ArrowRightLeft, Wrench, Rocket } from 'lucide-react';
 
 const services = [
   {
-    title: 'Agendamiento Automático',
-    description: 'Sincroniza calendarios y programa reuniones sin intervención manual, evitando conflictos de horario.',
-    icon: Calendar,
+    title: 'Sitios Web Innovadores',
+    description: 'Diseño y desarrollo de páginas web modernas, rápidas y adaptables, enfocadas en conversión y marca.',
+    icon: LayoutGrid,
     color: 'var(--color-neon-cyan)',
   },
   {
-    title: 'Gestión de Correos',
-    description: 'Clasificación, respuesta y seguimiento automatizado de emails para mantener tu bandeja al día.',
-    icon: Mail,
+    title: 'Aplicativos Web a Medida',
+    description: 'Aplicaciones web escalables, paneles de administración, autenticación y APIs integradas.',
+    icon: Code,
     color: 'var(--color-neon-purple)',
   },
   {
-    title: 'Sincronización de CRM',
-    description: 'Actualización en tiempo real de prospectos y clientes en tus plataformas de gestión favoritas.',
-    icon: Database,
+    title: 'Automatizaciones Empresariales',
+    description: 'Optimización de procesos con flujos automáticos que reducen tareas repetitivas y errores.',
+    icon: Workflow,
     color: 'var(--color-neon-pink)',
   },
   {
-    title: 'Disponibilidad 24/7',
-    description: 'Tus flujos de trabajo nunca se detienen. Los asistentes operan sin interrupciones ni errores humanos.',
-    icon: Clock,
+    title: 'Integraciones y APIs',
+    description: 'Conectamos tu CRM/ERP, pasarelas de pago y servicios terceros para un ecosistema unificado.',
+    icon: ArrowRightLeft,
     color: 'var(--color-neon-cyan)',
   },
   {
-    title: 'Flujos Interconectados',
-    description: 'Une diferentes herramientas (Slack, WhatsApp, Sheets) en un solo ecosistema de trabajo fluido.',
-    icon: ArrowRightLeft,
+    title: 'Mantenimiento y Soporte',
+    description: 'Monitoreo, mejoras continuas y resolución de incidencias para garantizar disponibilidad.',
+    icon: Wrench,
     color: 'var(--color-neon-purple)',
   },
   {
-    title: 'Paneles de Control',
-    description: 'Visualiza el estado de cada tarea y el rendimiento de tus asistentes programados en tiempo real.',
-    icon: LayoutGrid,
+    title: 'SEO y Performance',
+    description: 'Mejoras de Core Web Vitals, buenas prácticas y despliegues eficientes en la nube.',
+    icon: Rocket,
     color: 'var(--color-neon-pink)',
   },
 ];
@@ -88,7 +88,7 @@ export default function Services() {
             transition={{ duration: 0.6 }}
             className="text-4xl lg:text-5xl font-bold mb-4"
           >
-            Tareas <span className="gradient-text">Automatizadas</span>
+            Servicios y <span className="gradient-text">Soluciones Tecnológicas</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto text-lg"
           >
-            Delegue las tareas repetitivas a nuestros asistentes programados y recupere el control de su tiempo.
+            Somos una empresa de programación que construye sitios y aplicaciones web a medida, e integra automatizaciones que impulsan tu negocio.
           </motion.p>
         </div>
 

@@ -38,8 +38,8 @@ export default function Contact() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-neon-purple/10 blur-[100px] -z-10" />
 
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">¿Listo para el <span className="gradient-text">Futuro</span>?</h2>
-            <p className="text-gray-400">Cuéntanos sobre tu proyecto y cómo podemos ayudarte a automatizarlo.</p>
+            <h2 className="text-4xl font-bold mb-4">Hablemos de tu <span className="gradient-text">Proyecto</span></h2>
+            <p className="text-gray-400">Cuéntanos si necesitas un sitio web, un aplicativo a medida o automatizar procesos clave.</p>
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
