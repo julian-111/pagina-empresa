@@ -1,7 +1,6 @@
 import Background from './components/Three/Background';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
-import Pricing from './components/Pricing/Pricing';
 import Contact from './components/Contact/Contact';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
@@ -49,10 +48,6 @@ function App() {
                 Servicios
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-cyan transition-all group-hover:w-full"></span>
               </a>
-              <a href="#pricing" className="hover:text-neon-cyan transition-all hover:scale-110 relative group">
-                Precios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-cyan transition-all group-hover:w-full"></span>
-              </a>
               <button onClick={scrollToContact} className="hover:text-neon-cyan transition-all hover:scale-110 relative group">
                 Contacto
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-cyan transition-all group-hover:w-full"></span>
@@ -65,7 +60,6 @@ function App() {
       <div className="relative z-10">
         <Hero onOpenContact={scrollToContact} />
         <Services />
-        <Pricing />
         <Contact />
         
         <footer className="py-12 border-t border-white/5 bg-dark-bg/50 backdrop-blur-sm">

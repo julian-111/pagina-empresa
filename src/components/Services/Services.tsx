@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { LayoutGrid, Code, Workflow, ArrowRightLeft, Wrench, Rocket } from 'lucide-react';
+import { LayoutGrid, Code, Workflow, ArrowRightLeft, Wrench } from 'lucide-react';
 
 const services = [
   {
@@ -31,12 +31,6 @@ const services = [
     description: 'Monitoreo, mejoras continuas y resolución de incidencias para garantizar disponibilidad.',
     icon: Wrench,
     color: 'var(--color-neon-purple)',
-  },
-  {
-    title: 'SEO y Performance',
-    description: 'Mejoras de Core Web Vitals, buenas prácticas y despliegues eficientes en la nube.',
-    icon: Rocket,
-    color: 'var(--color-neon-pink)',
   },
 ];
 

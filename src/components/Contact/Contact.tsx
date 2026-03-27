@@ -23,11 +23,31 @@ export default function Contact() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    // Simular envío
-    console.log('Form data:', data);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    alert('¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.');
-    reset();
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/carlos8perez1110@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nombre: data.name,
+          Email: data.email,
+          Mensaje: data.message,
+          _subject: "Nuevo mensaje de contacto - Soluciones Tecnológicas"
+        })
+      });
+
+      if (response.ok) {
+        alert('¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.');
+        reset();
+      } else {
+        alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Hubo un error al enviar el mensaje. Por favor, revisa tu conexión e intenta nuevamente.');
+    }
   };
 
   return (
