@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ExternalLink, Code, Layout, Cpu } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Cpu } from 'lucide-react';
 
 const projects = [
   {
