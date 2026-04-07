@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ExternalLink, Code, Layout, Cpu } from 'lucide-react';
 
@@ -147,7 +147,10 @@ export default function Projects() {
                     className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                     style={{ backgroundColor: `${projects[currentIndex].color}20`, border: `1px solid ${projects[currentIndex].color}40` }}
                   >
-                    <projects[currentIndex].icon size={32} style={{ color: projects[currentIndex].color }} />
+                    {(() => {
+                      const Icon = projects[currentIndex].icon;
+                      return <Icon size={32} style={{ color: projects[currentIndex].color }} />;
+                    })()}
                   </div>
 
                   <h3 className="text-3xl font-bold mb-4 text-white leading-tight">
