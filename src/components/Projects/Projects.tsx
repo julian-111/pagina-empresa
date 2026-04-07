@@ -4,36 +4,12 @@ import { ChevronLeft, ChevronRight, ExternalLink, Code, Layout, Cpu } from 'luci
 
 const projects = [
   {
-    title: 'E-commerce Automation Hub',
-    category: 'Automatización',
-    description: 'Sistema que sincroniza inventario entre Shopify, Amazon y Mercado Libre en tiempo real.',
+    title: '',
+    category: '',
+    description: '',
     icon: Cpu,
     color: 'var(--color-neon-cyan)',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop',
-  },
-  {
-    title: 'SaaS CRM Dashboard',
-    category: 'Desarrollo Web',
-    description: 'Panel de control administrativo con visualización de datos complejos y gestión de usuarios masiva.',
-    icon: Layout,
-    color: 'var(--color-neon-purple)',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-  },
-  {
-    title: 'AI Lead Generator Bot',
-    category: 'Aplicativos',
-    description: 'Bot programado para extraer leads de LinkedIn y enviar correos personalizados automáticamente.',
-    icon: Code,
-    color: 'var(--color-neon-pink)',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
-  },
-  {
-    title: 'Fintech Mobile App',
-    category: 'Desarrollo App',
-    description: 'Interfaz fluida para gestión de activos digitales con seguridad biométrica integrada.',
-    icon: Cpu,
-    color: 'var(--color-neon-cyan)',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
+    image: '',
   },
 ];
 
