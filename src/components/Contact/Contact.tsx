@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { motion } from 'framer-motion';
 import { Send, Mail, User, MessageSquare } from 'lucide-react';
+import LegalModal from '../Legal/LegalModal';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
@@ -13,6 +15,16 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function Contact() {
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalModalShown, setLegalModalShown] = useState(false);
+
+  const handleInputFocus = () => {
+    if (!legalModalShown) {
+      setLegalModalOpen(true);
+      setLegalModalShown(true);
+    }
+  };
+
   const {
     register,
     handleSubmit,
@@ -71,6 +83,7 @@ export default function Contact() {
                 </label>
                 <input
                   {...register('name')}
+                  onFocus={handleInputFocus}
                   className={`w-full bg-white/5 border rounded-xl px-4 py-3 text-white focus:outline-none transition-all duration-300 ${
                     errors.name ? 'border-red-500/50 focus:border-red-500' : 'border-white/10 focus:border-neon-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]'
                   }`}
@@ -86,6 +99,7 @@ export default function Contact() {
                 </label>
                 <input
                   {...register('email')}
+                  onFocus={handleInputFocus}
                   className={`w-full bg-white/5 border rounded-xl px-4 py-3 text-white focus:outline-none transition-all duration-300 ${
                     errors.email ? 'border-red-500/50 focus:border-red-500' : 'border-white/10 focus:border-neon-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]'
                   }`}
@@ -102,6 +116,7 @@ export default function Contact() {
               </label>
               <textarea
                 {...register('message')}
+                onFocus={handleInputFocus}
                 rows={4}
                 className={`w-full bg-white/5 border rounded-xl px-4 py-3 text-white focus:outline-none transition-all duration-300 resize-none ${
                   errors.message ? 'border-red-500/50 focus:border-red-500' : 'border-white/10 focus:border-neon-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]'
@@ -129,6 +144,10 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <LegalModal 
+        isOpen={legalModalOpen} 
+        onClose={() => setLegalModalOpen(false)} 
+      />
     </section>
   );
 }
